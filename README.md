@@ -1,6 +1,3 @@
-# ecommerce-sql-grafana
-PostgreSQL + Docker + Grafana: SQL-анализ и дашборд маркетплейса
-
 # E-commerce аналитика: PostgreSQL + Docker + Grafana
 
 Учебный проект Развёрнута инфраструктура для хранения и анализа данных маркетплейса, написаны аналитические SQL-запросы и собран дашборд в Grafana.
