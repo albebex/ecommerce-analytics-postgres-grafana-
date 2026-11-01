@@ -1,4 +1,6 @@
-*.csv
-*.sql.bak
 .env
+*.csv
+*.zip
 .DS_Store
+.vscode/
+.idea/
