@@ -108,8 +108,6 @@ LIMIT 10;
 
 ## Дашборд в Grafana
 
-<img src="docs/dashboard.png" alt="Общий вид дашборда" width="900">
-
 | | | |
 |---|---|---|
 | <img src="docs/panels/01-orders-by-month.png" width="280"><br>Заказы по месяцам | <img src="docs/panels/02-ratings.png" width="280"><br>Распределение оценок | <img src="docs/panels/03-payment-types.png" width="280"><br>Способы оплаты |
