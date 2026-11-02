@@ -1,10 +1,8 @@
-# E-commerce аналитика: PostgreSQL + Docker + Grafana
-
 # Аналитика маркетплейса: SQL-запросы и дашборд в Grafana
 
 Учебный проект. По данным бразильского маркетплейса я загрузила данные в PostgreSQL, ответила на четыре бизнес-вопроса SQL-запросами и собрала дашборд в Grafana из 6 панелей.
 
-> Окружение (виртуальная машина) больше недоступно, поэтому результаты зафиксированы кодом в папке `sql/` и скриншотами в `docs/`.
+> Окружение (виртуальная машина) больше недоступно, поэтому результаты зафиксированы кодом в папке `queries/` и скриншотами в `docs/`.
 
 ## Главное
 
@@ -34,6 +32,8 @@ flowchart LR
 
 10 таблиц: `geolocation`, `leads_closed`, `product_category_name_translation`, `sellers`, `customers`, `products`, `orders`, `order_items`, `order_reviews`, `order_payments`. Данные импортированы из CSV в порядке зависимостей (справочники, затем заказы и платежи).
 
+Скрипт создания таблиц(из задания курса): schema/create_tables.sql 
+
 <img src="docs/adcm-overview.png" alt="Кластер в ADCM, все сервисы работают" width="900">
 
 Кластер в ADCM: сервисы ADPG и Monitoring (ADPG Exporter, Grafana, Node Exporter, Prometheus Server) запущены в штатном режиме.
@@ -42,7 +42,7 @@ flowchart LR
 
 ### 1. Какие категории приносят основную выручку?
 
-Запрос: [`sql/01_top_categories.sql`](queries/01_top_categories.sql)
+Запрос: [`queries/01_top_categories.sql`](queries/01_top_categories.sql)
 
 | Категория | Выручка (GMV) | Заказов | Позиций | Выручка на позицию |
 |---|---:|---:|---:|---:|
@@ -56,7 +56,7 @@ flowchart LR
 
 ### 2. Как покупатели платят?
 
-Запрос: [`sql/02_payment_behavior.sql`](queries/02_payment_behavior.sql)
+Запрос: [`queries/02_payment_behavior.sql`](queries/02_payment_behavior.sql)
 
 | Способ оплаты | Платежей | Средняя рассрочка | Средний платёж | Доля заказов |
 |---|---:|---:|---:|---:|
@@ -69,7 +69,7 @@ flowchart LR
 
 ### 3. Влияет ли скорость доставки на оценку покупателя?
 
-Запрос: [`sql/03_delivery_vs_reviews.sql`](queries/03_delivery_vs_reviews.sql)
+Запрос: [`queries/03_delivery_vs_reviews.sql`](queries/03_delivery_vs_reviews.sql)
 
 | Срок доставки | Отзывов | Средняя оценка |
 |---|---:|---:|
@@ -81,7 +81,7 @@ flowchart LR
 
 ### 4. Кто из продавцов лидирует?
 
-Запрос: [`sql/04_seller_efficiency.sql`](queries/04_seller_efficiency.sql)
+Запрос: [`queries/04_seller_efficiency.sql`](queries/04_seller_efficiency.sql)
 
 Топ-10 продавцов по числу заказов (от 1 080 до 1 854 заказов) сильно различаются по выручке: от 37 тыс. до 229 тыс. Лидер по заказам получил 123 тыс. выручки при средней цене позиции около 61, а продавец с 1 132 заказами получил 229 тыс. при средней цене около 199. Это два разных профиля ассортимента: массовый дешёвый и более дорогой.
 
