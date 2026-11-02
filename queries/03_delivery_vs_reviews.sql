@@ -1,9 +1,4 @@
-WITH review_per_order AS (
-    SELECT order_id, AVG(review_score) AS review_score
-    FROM order_reviews
-    GROUP BY order_id
-),
-delivery_data AS (
+WITH delivery_data AS (
     SELECT
         o.order_id,
         r.review_score,
@@ -21,8 +16,7 @@ SELECT
         ELSE '3. Более 10 дней'
     END AS bucket,
     COUNT(*) AS orders_cnt,
-    ROUND(AVG(review_score), 2) AS avg_review,
-    ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (), 1) AS share_pct -- доля группы
+    ROUND(AVG(review_score), 2) AS avg_review
 FROM delivery_data
 GROUP BY bucket
 ORDER BY bucket;
