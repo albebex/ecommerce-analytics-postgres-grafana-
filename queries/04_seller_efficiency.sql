@@ -1,3 +1,5 @@
+-- Ограничение: customer_id создаётся на каждый заказ, поэтому customers_cnt равен числу заказов; для клиентов нужен customer_unique_id
+
 SELECT
     s.seller_id,
     COUNT(DISTINCT oi.order_id) AS orders_cnt,
