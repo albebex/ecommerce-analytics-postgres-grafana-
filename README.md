@@ -30,7 +30,7 @@ flowchart LR
 
 ## Схема данных
 
-<img src="docs/er-diagram.png" alt="ER-диаграмма базы ecommerce" width="900">
+<img src="docs/er-diagram.png" alt="ER-диаграмма базы ecommerce" width="700">
 
 10 таблиц: `geolocation`, `leads_closed`, `product_category_name_translation`, `sellers`, `customers`, `products`, `orders`, `order_items`, `order_reviews`, `order_payments`. Данные импортированы из CSV в порядке зависимостей (справочники, затем заказы и платежи).
 
