@@ -42,7 +42,7 @@ flowchart LR
 
 ### 1. Какие категории приносят основную выручку?
 
-Запрос: [`sql/01_top_categories.sql`](sql/01_top_categories.sql)
+Запрос: [`sql/01_top_categories.sql`](queries/01_top_categories.sql)
 
 | Категория | Выручка (GMV) | Заказов | Позиций | Выручка на позицию |
 |---|---:|---:|---:|---:|
@@ -56,7 +56,7 @@ flowchart LR
 
 ### 2. Как покупатели платят?
 
-Запрос: [`sql/02_payment_behavior.sql`](sql/02_payment_behavior.sql)
+Запрос: [`sql/02_payment_behavior.sql`](queries/02_payment_behavior.sql)
 
 | Способ оплаты | Платежей | Средняя рассрочка | Средний платёж | Доля заказов |
 |---|---:|---:|---:|---:|
@@ -69,7 +69,7 @@ flowchart LR
 
 ### 3. Влияет ли скорость доставки на оценку покупателя?
 
-Запрос: [`sql/03_delivery_vs_reviews.sql`](sql/03_delivery_vs_reviews.sql)
+Запрос: [`sql/03_delivery_vs_reviews.sql`](queries/03_delivery_vs_reviews.sql)
 
 | Срок доставки | Отзывов | Средняя оценка |
 |---|---:|---:|
@@ -81,7 +81,7 @@ flowchart LR
 
 ### 4. Кто из продавцов лидирует?
 
-Запрос: [`sql/04_seller_efficiency.sql`](sql/04_seller_efficiency.sql)
+Запрос: [`sql/04_seller_efficiency.sql`](queries/04_seller_efficiency.sql)
 
 Топ-10 продавцов по числу заказов (от 1 080 до 1 854 заказов) сильно различаются по выручке: от 37 тыс. до 229 тыс. Лидер по заказам получил 123 тыс. выручки при средней цене позиции около 61, а продавец с 1 132 заказами получил 229 тыс. при средней цене около 199. Это два разных профиля ассортимента: массовый дешёвый и более дорогой.
 
