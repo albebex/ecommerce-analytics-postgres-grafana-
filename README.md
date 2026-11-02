@@ -27,12 +27,12 @@ flowchart LR
 **Данные:** учебный датасет курса. Категории товаров на португальском, поэтому в запросах используется таблица переводов. Все суммы в валюте датасета.
 
 ## Схема данных
+Скрипт создания таблиц(из задания курса): [`schema/create_tables.sql`](schema/create_tables.sql)
 
 <img src="docs/er-diagram.png" alt="ER-диаграмма базы ecommerce" width="700">
 
 10 таблиц: `geolocation`, `leads_closed`, `product_category_name_translation`, `sellers`, `customers`, `products`, `orders`, `order_items`, `order_reviews`, `order_payments`. Данные импортированы из CSV в порядке зависимостей (справочники, затем заказы и платежи).
 
-Скрипт создания таблиц(из задания курса): [`schema/create_tables.sql`](schema/create_tables.sql)
 
 <img src="docs/adcm-overview.png" alt="Кластер в ADCM, все сервисы работают" width="900">
 
