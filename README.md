@@ -26,7 +26,7 @@ flowchart LR
 
 **Стек:** PostgreSQL · SQL (JOIN, CTE, агрегаты, подзапросы) · Docker · Arenadata Cluster Manager · Prometheus · Grafana · DBeaver
 
-**Данные:** [название датасета и ссылка на источник]. Категории товаров на португальском, поэтому в запросах используется таблица переводов. Все суммы в валюте датасета ([укажите: реалы BRL]).
+**Данные:** https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data. Категории товаров на португальском, поэтому в запросах используется таблица переводов. Все суммы в валюте датасета.
 
 ## Схема данных
 
